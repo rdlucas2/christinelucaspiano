@@ -1,0 +1,12 @@
+#nav {
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    width: 100%;
+}
+#callout {
+    background-image: url('images/piano.jpg');
+}
+.img-circle {
+    border-radius: 50%
+}
