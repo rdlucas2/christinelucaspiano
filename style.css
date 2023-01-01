@@ -22,20 +22,6 @@
     background-size: cover;
 }
 
-#nav {
-    position: fixed;
-    top: 0px;
-    z-index: 9999;
-    width: 100%;
-}
-
-.frame {
-    border-width:30px;
-    border-color: #666 #1c87c9;
-    padding-top: 65px;
-}
-
 #content {
-    padding-top: 65px;
     background-color:rgba(255, 255, 255, 0.75)
 }
