@@ -50,6 +50,19 @@
     text-align: center;
 }
 
+#sidebar-signin {
+    text-align: center;
+    height: 318px;
+}
+
 #policies li {
     margin-left: 20px;
+}
+
+.accentTextColor {
+    color: black !important;
+}
+
+.accentBackgroundColor {
+    background-color: white !important;
 }
