@@ -50,19 +50,18 @@
     text-align: center;
 }
 
-#sidebar-signin {
+#signin {
     text-align: center;
-    height: 318px;
+    height: 400px;
 }
 
 #policies li {
     margin-left: 20px;
 }
 
-.accentTextColor {
-    color: black !important;
-}
 
+/* this is the class that's broken in the widget from mymusicstaff
 .accentBackgroundColor {
     background-color: white !important;
 }
+*/
