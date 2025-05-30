@@ -59,6 +59,9 @@
     margin-left: 20px;
 }
 
+.monospaced {
+    font-family: monospace;
+}
 
 /* this is the class that's broken in the widget from mymusicstaff
 .accentBackgroundColor {
