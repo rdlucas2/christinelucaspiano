@@ -65,12 +65,40 @@
                 <li>Course cost: $240.</li>
             </ul>
 
+            <h4 id="signup">Sign up</h4>
             <p>
-                If you're ready to join the group class, please
-                <a data-group-class-cta="email" href="mailto:contact@christinelucaspiano.com?Subject=Adult%20Group%20Class">email me</a>
+                Ready to join? Fill out the form below and I'll get back to you to confirm your spot.
+                Prefer to talk first? <a data-group-class-cta="email" href="mailto:contact@christinelucaspiano.com?Subject=Adult%20Group%20Class">Email me</a>
                 or call/text <a data-group-class-cta="phone" href="tel:+14129745584">412-974-5584</a>.
-                You can also find all my contact info on the <a data-group-class-cta="contact_page" href="contact.html">contact page</a>.
             </p>
+
+            <form id="signup-form" class="signup-form" novalidate>
+                <input type="hidden" name="class" value="Adult Group Piano - Mondays 11:30 AM - starts January 2027">
+                <label>Name
+                    <input type="text" name="name" autocomplete="name" required maxlength="100">
+                </label>
+                <label>Email
+                    <input type="email" name="email" autocomplete="email" required maxlength="200">
+                </label>
+                <label>Phone <span class="optional">(optional)</span>
+                    <input type="tel" name="phone" autocomplete="tel" maxlength="40">
+                </label>
+                <label>Piano experience
+                    <select name="experience">
+                        <option>I've never played</option>
+                        <option>I played a little, a long time ago</option>
+                        <option>I can read some music already</option>
+                    </select>
+                </label>
+                <label>Anything you'd like me to know? <span class="optional">(optional)</span>
+                    <textarea name="message" rows="3" maxlength="2000"></textarea>
+                </label>
+                <div class="hp-field" aria-hidden="true">
+                    <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+                </div>
+                <button type="submit" class="button">Sign Me Up</button>
+                <p id="signup-status" role="status"></p>
+            </form>
         </div>
 
         <div class="medium-4 columns" data-sticky-container>
@@ -79,7 +107,7 @@
                     <image src="images/christine.jpg" width="50%" alt="A picture of Christine Lucas"></image>
                 </div>
                 <div id="sidebar-link">
-                    <a class="button" data-group-class-cta="email" href="mailto:contact@christinelucaspiano.com?Subject=Adult%20Group%20Class">Join the Group Class</a>
+                    <a class="button" href="#signup">Join the Group Class</a>
                 </div>
             </div>
         </div>
@@ -97,6 +125,7 @@
         $(document).foundation();
     </script>
     <script src="js/track.js" defer></script>
+    <script src="js/signup.js" defer></script>
 </body>
 
 </html>

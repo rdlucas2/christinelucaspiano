@@ -68,3 +68,24 @@
     background-color: white !important;
 }
 */
+.signup-form {
+    max-width: 480px;
+    margin-bottom: 1rem;
+}
+
+.signup-form .optional {
+    color: #555;
+    font-weight: normal;
+}
+
+.signup-form .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#signup-status a {
+    text-decoration: underline;
+}
