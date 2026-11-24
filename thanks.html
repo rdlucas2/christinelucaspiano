@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-M95SXW2H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Thanks for signing up for the adult group piano class with Christine Lucas.">
+    <meta name="robots" content="noindex">
+    <meta name="author" content="Ryan Lucas">
+    <meta name="keywords" content="piano lessons, learn to play piano, learn piano, piano teacher, piano lessons for beginners, piano for kids, piano for adults, piano lessons near me, learn to play keyboard, adult piano lessons, piano lessons for adults, beginners piano, learn keyboard, keyboard lessons, music lessons, Cranberry Township, Butler County, Beaver County">
+    <meta name="google-site-verification" content="DhsKidklf2oNsLJEFaTidHcNo-Juzq8t6-jEf5cGyzQ" />
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <title>Thanks for Signing Up - Christine Lucas Piano Studio</title>
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="image-container">
+        <div class="background-img"></div>
+    </div>
+
+    <!-- Start Top Bar -->
+    <div class="row expanded">
+        <div class="top-bar">
+            <div class="top-bar-left">
+                <ul class="menu">
+                    <li><a href="index.html" id="logo">Christine Lucas Piano Studio</a></li>
+                </ul>
+            </div>
+            <div class="top-bar-right">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="studio-policies.html">Studio Policies</a></li>
+                    <li>
+                        <a href="student-portal.html">Student Portal</a>
+                    </li>
+                    <li><a data-open="signin">Sign-In</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Bar -->
+
+
+    <div class="row" id="content">
+        <div class="medium-8 columns">
+            <h3>Thank you, you're signed up!</h3>
+            <p>
+                I'm so glad you're joining the adult group piano class. I'll reach out within a day or two
+                to confirm your spot and go over the details for our first class in January.
+            </p>
+            <ul style="margin-left:20px">
+                <li>Mondays, 11:30 AM-12:30 PM, 6 weeks</li>
+                <li>PYCO Music Center, 150 Lake Dr, Suite 103, Wexford, PA 15090</li>
+                <li>Course cost: $240</li>
+            </ul>
+            <p>
+                Questions in the meantime? <a href="mailto:contact@christinelucaspiano.com?Subject=Adult%20Group%20Class">Email me</a>
+                or call/text <a href="tel:+14129745584">412-974-5584</a>.
+            </p>
+            <p><a href="group-class.html">&larr; Back to the group class page</a></p>
+        </div>
+
+        <div class="medium-4 columns" data-sticky-container>
+            <div class="sticky" data-sticky data-anchor="content">
+                <div id="sidebar-img">
+                    <image src="images/christine.jpg" width="50%" alt="A picture of Christine Lucas"></image>
+                </div>
+                <div id="sidebar-link">
+                    <a class="button" href="index.html">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="reveal" id="signin" data-reveal>
+        <p class="lead">Sign-in to mymusicstaff account:</p>
+        <script type='text/javascript' src='https://app.mymusicstaff.com/Widget/v2/Login.ashx'></script>
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+        $(document).foundation();
+    </script>
+    <script src="js/track.js" defer></script>
+    <script>
+        // Record the sign-up once, only when arriving from the form (not on refresh or direct visits).
+        (function () {
+            var fromForm = false;
+            try {
+                fromForm = sessionStorage.getItem("group_class_signup") === "1";
+                sessionStorage.removeItem("group_class_signup");
+            } catch (e) {}
+            if (fromForm && typeof window.gtag === "function") {
+                window.gtag("event", "generate_lead", { form_name: "group_class_signup" });
+            }
+        })();
+    </script>
+</body>
+
+</html>
