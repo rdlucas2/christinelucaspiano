@@ -18,42 +18,42 @@
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <title>Adult Group Piano Class - Christine Lucas Piano Studio</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+    <link rel="stylesheet" href="css/site.css">
 </head>
 
 <body>
-    <div class="image-container">
-        <div class="background-img"></div>
-    </div>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Start Top Bar -->
-    <div class="row expanded">
-        <div class="top-bar">
-            <div class="top-bar-left">
-                <ul class="menu">
-                    <li><a href="index.html" id="logo">Christine Lucas Piano Studio</a></li>
-                </ul>
-            </div>
-            <div class="top-bar-right">
-                <ul class="menu">
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img class="brand-mark" src="images/favicon.svg" alt="" width="64" height="64">
+                <span class="brand-name">Christine Lucas <span>Piano Studio</span></span>
+            </a>
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span class="nav-toggle-bar" aria-hidden="true"></span>
+                <span class="nav-toggle-label">Menu</span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Main">
+                <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="group-class.html">Group Class</a></li>
+                    <li><a href="group-class.html" aria-current="page">Group Class</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="studio-policies.html">Studio Policies</a></li>
-                    <li>
-                        <a href="student-portal.html">Student Portal</a>
-                    </li>
-                    <li><a data-open="signin">Sign-In</a></li>
+                    <li><a href="student-portal.html">Student Portal</a></li>
+                    <li><button class="btn btn-ghost btn-small" type="button" data-open-signin>Sign-In</button></li>
                 </ul>
-            </div>
+            </nav>
         </div>
-    </div>
-    <!-- End Top Bar -->
+    </header>
 
-
-    <div class="row" id="content">
-        <div class="medium-8 columns">
+    <main class="page" id="main">
+        <div class="container page-grid">
+            <div class="page-main">
             <h3>Adult Group Class</h3>
             <p>
                 A new year is almost here. It's the perfect time to make your resolution to learn to play music a reality! 
@@ -103,34 +103,37 @@
                 <div class="hp-field" aria-hidden="true">
                     <label>Leave this empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
                 </div>
-                <button type="submit" class="button">Sign Me Up</button>
+                <button type="submit" class="btn btn-primary">Sign Me Up</button>
                 <p id="signup-status" role="status"></p>
             </form>
-        </div>
-
-        <div class="medium-4 columns" data-sticky-container>
-            <div class="sticky" data-sticky data-anchor="content">
-                <div id="sidebar-img">
-                    <image src="images/christine.jpg" width="50%" alt="A picture of Christine Lucas"></image>
-                </div>
-                <div id="sidebar-link">
-                    <a class="button" href="#signup">Join the Group Class</a>
-                </div>
             </div>
+
+            <aside class="page-aside">
+                <div class="aside-card">
+                    <img src="images/christine.jpg" alt="A picture of Christine Lucas">
+                    <a class="btn btn-primary" href="#signup">Join the Group Class</a>
+                </div>
+            </aside>
         </div>
-    </div>
-    <div class="reveal" id="signin" data-reveal>
-        <p class="lead">Sign-in to mymusicstaff account:</p>
-        <script type='text/javascript' src='https://app.mymusicstaff.com/Widget/v2/Login.ashx'></script>
-        <button class="close-button" data-close aria-label="Close reveal" type="button">
-          <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script>
-        $(document).foundation();
-    </script>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-name">Christine Lucas Piano Studio</p>
+            <p>PYCO School of Music &amp; Music Store &middot; 150 Lake Dr Suite 103, Wexford, PA 15090</p>
+            <p><a href="tel:+14129745584">412-974-5584</a> &middot; <a href="mailto:contact@christinelucaspiano.com?Subject=Piano%20Lessons%20Request">contact@christinelucaspiano.com</a></p>
+            <p>Group music theory classes: <a href="https://theorymadefun.com/">Theory Made Fun</a></p>
+            <p class="footer-fine">&copy; 2026 Christine Lucas Piano Studio</p>
+        </div>
+    </footer>
+
+    <dialog class="signin-dialog" id="signin" aria-labelledby="signin-title">
+        <button class="dialog-close" type="button" data-close-signin aria-label="Close sign-in">&times;</button>
+        <p class="lead" id="signin-title">Sign-in to mymusicstaff account:</p>
+        <div class="signin-widget" id="signin-widget"></div>
+    </dialog>
+
+    <script src="js/site.js" defer></script>
     <script src="js/track.js" defer></script>
     <script src="js/signup.js" defer></script>
 </body>
