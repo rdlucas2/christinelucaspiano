@@ -3,7 +3,7 @@
    then sends the visitor to thanks.html, which records the conversion. */
 (function () {
   // Paste the Apps Script "Web app URL" (ends in /exec) here.
-  var SIGNUP_ENDPOINT = "";
+  var SIGNUP_ENDPOINT = "https://script.google.com/macros/s/AKfycbziXtjOWonAI5P_4jXWBuQNLZhS4OTN4HrpZ10M8k20w2XkL9_LjQGuucmOETPaCes57g/exec";
   var FALLBACK_EMAIL = "contact@christinelucaspiano.com";
 
   var form = document.getElementById("signup-form");
