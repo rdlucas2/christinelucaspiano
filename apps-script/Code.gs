@@ -1,3 +1,5 @@
+/** @OnlyCurrentDoc */
+
 /**
  * Group class sign-up receiver for christinelucaspiano.com.
  *

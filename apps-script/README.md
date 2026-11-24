@@ -16,10 +16,16 @@ contact@christinelucaspiano.com. No server or paid service is involved.
    - Description: `signup form`
    - Execute as: **Me**
    - Who has access: **Anyone**
-   - Click **Deploy**, then **Authorize access** and allow it. (Google shows an
+   - Click **Deploy**, then **Authorize access**. Google shows an
      "unverified app" warning because you wrote the script yourself: click
-     *Advanced → Go to … (unsafe)*. It only gets access to this sheet and
-     permission to send email as you.)
+     *Advanced → Go to … (unsafe)*.
+   - On the permissions screen, tick **both** boxes:
+     - *View and manage spreadsheets that this application has been installed
+       in* — the `@OnlyCurrentDoc` line at the top of `Code.gs` limits it to
+       this one sheet. If it instead says "all your Google Sheets", the first
+       line of the pasted code is missing.
+     - *Send email as you* — used only for the notification email.
+     Leaving either unticked makes every sign-up fail.
 5. Copy the **Web app URL** (ends in `/exec`).
 6. Paste it into `SIGNUP_ENDPOINT` at the top of `js/signup.js`, commit, and
    open a PR.
