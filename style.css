@@ -89,3 +89,20 @@
 #signup-status a {
     text-decoration: underline;
 }
+
+.lab-photo {
+    margin: 0 0 1rem;
+    max-width: 480px;
+}
+
+.lab-photo img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.lab-photo figcaption {
+    font-size: 0.875rem;
+    color: #444;
+    margin-top: 0.25rem;
+}
