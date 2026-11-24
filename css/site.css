@@ -2,7 +2,9 @@
    Christine Lucas Piano Studio (christinelucaspiano.com) — styles
    Visual language shared with theorymadefun.com: Fraunces + Nunito Sans,
    blue primary, soft cards, pill buttons, dark footer band.
-   Light theme only (the MyMusicStaff widgets render on white).
+   Light + dark themes (toggle in the header, same as theorymadefun.com).
+   The MyMusicStaff widgets always render on white, so the sign-in dialog
+   stays light in both themes.
    No frameworks.
    ========================================================================== */
 
@@ -30,6 +32,40 @@
   --link-hover: #005a82;
   --focus: #006c99;
   --shadow: 0 10px 30px -12px rgba(12, 35, 48, 0.16);
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b0f13;
+  --bg-alt: #12181d;
+  --surface: #171f25;
+  --border: #2b353d;
+  --text: #e9f0f4;
+  --text-muted: #a6b3bc;
+  --heading: #f4f9fc;
+  --link: #4cbfef;
+  --link-hover: #79d2f5;
+  --focus: #4cbfef;
+  --shadow: 0 12px 34px -14px rgba(0, 0, 0, 0.65);
+  color-scheme: dark;
+}
+
+/* Follow the OS preference until the visitor makes an explicit choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --bg: #0b0f13;
+    --bg-alt: #12181d;
+    --surface: #171f25;
+    --border: #2b353d;
+    --text: #e9f0f4;
+    --text-muted: #a6b3bc;
+    --heading: #f4f9fc;
+    --link: #4cbfef;
+    --link-hover: #79d2f5;
+    --focus: #4cbfef;
+    --shadow: 0 12px 34px -14px rgba(0, 0, 0, 0.65);
+    color-scheme: dark;
+  }
 }
 
 /* ---------- Base ---------- */
@@ -262,6 +298,50 @@ img {
 .site-nav a:not(.btn):hover,
 .site-nav a[aria-current="page"] {
   color: var(--link);
+}
+
+/* ---------- Theme toggle ---------- */
+
+.theme-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--heading);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.has-js .theme-toggle {
+  display: inline-flex;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+.theme-toggle[data-mode="dark"] .icon-moon {
+  display: none;
+}
+
+.theme-toggle[data-mode="dark"] .icon-sun {
+  display: block;
 }
 
 .nav-toggle {
@@ -505,6 +585,13 @@ img {
   font-size: 0.95em;
 }
 
+/* ---------- MyMusicStaff registration widget (white in both themes) ---------- */
+
+.page-main iframe[src*="mymusicstaff.com"] {
+  background: #ffffff;
+  border-radius: 12px;
+}
+
 /* ---------- Contact map ---------- */
 
 .page-main iframe[src*="google.com/maps"] {
@@ -593,6 +680,9 @@ img {
 /* ---------- Sign-in dialog (MyMusicStaff login widget) ---------- */
 
 .signin-dialog {
+  color-scheme: light;
+  background: #ffffff;
+  color: #10181d;
   width: min(440px, 100% - 2rem);
   border: 0;
   border-radius: var(--radius);
@@ -610,7 +700,7 @@ img {
   font-family: var(--font-display);
   font-size: 1.3rem;
   font-weight: 600;
-  color: var(--heading);
+  color: #0c2331;
 }
 
 .signin-widget {
@@ -625,15 +715,15 @@ img {
   height: 2.2rem;
   border: 0;
   border-radius: 999px;
-  background: var(--bg-alt);
-  color: var(--heading);
+  background: #e9f2f7;
+  color: #0c2331;
   font-size: 1.4rem;
   line-height: 1;
   cursor: pointer;
 }
 
 .dialog-close:hover {
-  background: var(--border);
+  background: #dae5ec;
 }
 
 /* ---------- Footer ---------- */
