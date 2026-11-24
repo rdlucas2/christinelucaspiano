@@ -348,13 +348,45 @@ img {
     width: 100%;
   }
 
-  .header-inner {
+  html:not(.has-js) .header-inner {
     flex-wrap: wrap;
   }
 
   html:not(.has-js) .site-nav ul {
     flex-wrap: wrap;
     gap: 0.4rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-mark {
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  .brand-name {
+    font-size: 1.1rem;
+  }
+
+  .brand-name span {
+    font-size: 0.7rem;
+  }
+
+  .nav-toggle {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .nav-toggle-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
 }
 
